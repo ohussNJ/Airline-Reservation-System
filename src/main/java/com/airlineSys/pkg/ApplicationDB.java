@@ -21,6 +21,7 @@ public class ApplicationDB {
 	}
 
 	public Connection getConnection(){	
+                // Establish connection based on mysql port number
 		String connectionUrl = "jdbc:mysql://localhost:3306/airlinedb";
 		Connection connection = null;
 		try {
