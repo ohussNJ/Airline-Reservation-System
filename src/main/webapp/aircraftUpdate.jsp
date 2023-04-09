@@ -14,16 +14,13 @@
 String aID=request.getParameter("aircraftID");
 String aName=request.getParameter("airlineName");
 String option=request.getParameter("whichOption");
-//System.out.println("aID:"+aID+" aName:"+aName+" option:"+option);
 
 Class.forName("com.mysql.jdbc.Driver");
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/airlinedb","root","password");
 
 if(option.equals("add"))
 {
-	Statement stmt = con.createStatement();
-    //String airportname = request.getParameter("airportname");
-    //String airportid = request.getParameter("airportid");
+    Statement stmt = con.createStatement();
     String query = "INSERT into aircraft(aircraftid, airlineid) VALUES (?, ?)";
     PreparedStatement preparedStmt = con.prepareStatement(query);
     preparedStmt.setString(1, aID);
