@@ -33,9 +33,6 @@
 			out.print("<tr>");
 			//make a column
 			out.print("<td>");
-			//print out column header
-			//out.print("Airline ID");
-			//out.print("</td>");
 			//make a column
 			out.print("<td>");
 			out.print("List of all Flights arriving and/or departing at "+entity);
