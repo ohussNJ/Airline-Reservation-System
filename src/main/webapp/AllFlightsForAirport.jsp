@@ -38,21 +38,6 @@
 			out.print("List of all Flights arriving and/or departing at "+entity);
 			out.print("</td>");
 			//make a column
-			//out.print("<td>");
-			//out.print("Departure Airport");
-			//out.print("</td>");
-			//make a column
-			//out.print("<td>");
-			//out.print("Destination Airport");
-			//out.print("</td>");
-			//make a column
-			//out.print("<td>");
-			//out.print("Departure Date");
-			//out.print("</td>");
-			//make a column
-			//out.print("<td>");
-			//out.print("destination Date");
-			//out.print("</td>");
 			out.print("</tr>");
 
 			//parse out the results
