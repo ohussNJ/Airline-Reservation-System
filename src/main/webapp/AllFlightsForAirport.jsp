@@ -45,27 +45,10 @@
 				//make a row
 				out.print("<tr>");
 				//make a column
-				//out.print("<td>");
-				//out.print(result.getString("airlineid"));
-				//out.print("</td>");
 				out.print("<td>");
 				out.print(result.getString("flightNum"));
 				out.print("</td>");
-				/*
-				out.print("<td>");
-				out.print(result.getString("departureairport"));
-				out.print("</td>");
-				out.print("<td>");
-				out.print(result.getString("destinationairport"));
-				out.print("</td>");
-				out.print("<td>");
-				out.print(result.getString("departuredate"));
-				out.print("</td>");
-				out.print("<td>");
-				out.print(result.getString("destinationdate"));
-				out.print("</td>");
-				out.print("</tr>");
-				*/
+
 
 			}
 			out.print("</table>");
