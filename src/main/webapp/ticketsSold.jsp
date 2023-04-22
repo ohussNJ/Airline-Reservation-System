@@ -20,7 +20,6 @@
 			//Create a SQL statement
 			Statement stmt = con.createStatement();
 			//Get the combobox from the index.jsp
-			//String entity = request.getParameter("price");
 				
 			String str = "SELECT f.flightNum, f.airlineid, f.departuredate, f.destinationdate, f.departureairport, f.destinationairport, count(*) AS tickets_sold from ticket t join flight f ON (t.flightNum = f.flightNum) GROUP BY f.flightNum, f.airlineid, f.departuredate, f.destinationdate, f.departureairport, f.destinationairport ORDER BY 7 DESC";
 		
