@@ -1,28 +1,35 @@
 USE `airlinedb`;
 
+--Setup admin w/ unlimitee access
 INSERT INTO admin(admin_username, admin_password) VALUES ("admin", "admin");
 
+--Setup users who can view, reserve, cancel flights
 INSERT INTO users(firstname, lastname, username, password, cid) VALUES ("omar", "hussein", "ohuss", "password", 1);
 INSERT INTO users(firstname, lastname, username, password, cid) VALUES ("john", "doe", "jdoe", "password", 2);
 INSERT INTO users(firstname, lastname, username, password, cid) VALUES ("jane", "doe", "jadoe", "password", 3);
 
+--Setup employee who can edit flight info(number tickets, time, etc.)
 INSERT INTO employee(eid, firstname, lastname, ssn, emp_username, emp_password) VALUES (10, "cus", "rep", 123, "cusrep", "password");
 
+--Setup airline companies that own flights and control destinations
 INSERT INTO airlinecompany(airlineid, name) VALUES("NY","New York Airport");
 INSERT INTO airlinecompany(airlineid, name) VALUES("LA", "Los Angeles Airport");
 INSERT INTO airlinecompany(airlineid, name) VALUES("NW", "Newark Airport");
 INSERT INTO airlinecompany(airlineid, name) VALUES("LO", "London Intl Airport");
 
+--Setup aircrafts that can be used by airlines
 insert into aircraft(aircraftid, airlineid) VALUES ("delta1", "NY");
 insert into aircraft(aircraftid, airlineid) VALUES ("united2", "LA");
 insert into aircraft(aircraftid, airlineid) VALUES ("spicejet3", "NW");
 insert into aircraft(aircraftid, airlineid) VALUES ("spirit4", "LO");
 
+--Setup airport that hold a certain amount of aircrafts
 insert into airport(airportid, airportname) values ("JFK", "New York");
 insert into airport(airportid, airportname) values ("EWR", "Newark");
 insert into airport(airportid, airportname) values ("LAX", "Los Angeles");
 insert into airport(airportid, airportname) values ("LCY", "London");
 
+--Create sample flights for reservations
 INSERT INTO flight(flightNum, departuredate, destinationdate, departureairport, destinationairport, isinternational, isdomestic, price, stops, takeoff_time, landing_time, aircraftid, airlineid) 
 VALUES (1, "2022-04-24", "2022-04-24", "JFK", "LAX", 0, 1, 200, 1, '101012','121212', "delta1", "NY");
 INSERT INTO flight(flightNum, departuredate, destinationdate, departureairport, destinationairport, isinternational, isdomestic, price, stops, takeoff_time, landing_time, aircraftid, airlineid) 
